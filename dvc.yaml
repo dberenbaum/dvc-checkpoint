@@ -1,0 +1,11 @@
+stages:
+  foo:
+    cmd: python checkpoint.py
+    params:
+    - start
+    outs:
+    - foo:
+        checkpoint: true
+    metrics:
+    - scores.yaml:
+        cache: false
