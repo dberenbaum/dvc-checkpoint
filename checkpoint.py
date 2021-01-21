@@ -22,7 +22,6 @@ def main():
     with open("params.yaml") as fobj:
         params = yaml.load(fobj)
     start = params.get("start", 0)
-    alpha = params["alpha"]
 
     for e in range(EPOCHS):
         if os.path.exists(output_file):
