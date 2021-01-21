@@ -25,23 +25,22 @@ def main():
     alpha = params["alpha"]
 
     for e in range(EPOCHS):
-        try:
-            if os.path.exists(output_file):
-                with open(output_file, "r") as fobj:
-                    try:
-                        data = fobj.read()
-                        iter_ = int(data) + 1
-                    except ValueError:
-                        iter_ = start
-            else:
-                iter_ = start
+        if os.path.exists(output_file):
+            with open(output_file, "r") as fobj:
+                try:
+                    data = fobj.read()
+                    iter_ = int(data) + 1
+                except ValueError:
+                    iter_ = start
+        else:
+            iter_ = start
 
-            with open(output_file, "w") as fobj:
-                fobj.write(f"{iter_}")
-            with open(metrics_file, "w") as fobj:
-                yaml.dump({"epoch": iter_}, fobj)
+        with open(output_file, "w") as fobj:
+            fobj.write(f"{iter_}")
+        with open(metrics_file, "w") as fobj:
+            yaml.dump({"epoch": iter_}, fobj)
 
-            make_checkpoint()
+        make_checkpoint()
 
 
 if __name__ == "__main__":
