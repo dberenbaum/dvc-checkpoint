@@ -4,11 +4,11 @@ stages:
     cmd: python checkpoint.py
     params:
       params.yaml:
-        start: 0
+        start: 100
     outs:
     - path: foo
-      md5: e4da3b7fbbce2345d7772b0674a318d5
+      md5: 1679091c5a880faf6fb5e6087eb1b2dc
       size: 1
     - path: scores.yaml
-      md5: 594a612e934e479f9167deebbddb96c3
+      md5: e3ac77a33557a07bc03410f1267a0797
       size: 9
