@@ -7,8 +7,8 @@ stages:
         start: 0
     outs:
     - path: foo
-      md5: cfcd208495d565ef66e7dff9f98764da
+      md5: c4ca4238a0b923820dcc509a6f75849b
       size: 1
     - path: scores.yaml
-      md5: 213aa1f8a4509d9b99dad7c9d5190f1f
+      md5: 77c33bdb5e3af30fbe96642cd8f82da4
       size: 9
