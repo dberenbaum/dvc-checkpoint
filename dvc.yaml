@@ -4,6 +4,7 @@ stages:
     params:
     - start
     deps:
+    - checkpoint.py
     - bar
     outs:
     - foo:

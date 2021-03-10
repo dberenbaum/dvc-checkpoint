@@ -12,6 +12,7 @@ from dvc.api import make_checkpoint
 
 
 EPOCHS=2
+STEP = 1
 
 
 def main():
@@ -28,7 +29,7 @@ def main():
             with open(output_file, "r") as fobj:
                 try:
                     data = fobj.read()
-                    iter_ = int(data) + 1
+                    iter_ = int(data) + STEP
                 except ValueError:
                     iter_ = start
         else:
