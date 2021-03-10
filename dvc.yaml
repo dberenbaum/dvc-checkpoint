@@ -3,6 +3,8 @@ stages:
     cmd: python checkpoint.py
     params:
     - start
+    deps:
+    - bar
     outs:
     - foo:
         checkpoint: true

@@ -23,6 +23,9 @@ def main():
         params = yaml.load(fobj)
     start = params.get("start", 0)
 
+    with open("bar") as fobj:
+        start += int(fobj.read().strip())
+
     for e in range(EPOCHS):
         if os.path.exists(output_file):
             with open(output_file, "r") as fobj:
