@@ -23,9 +23,6 @@ def main():
         params = yaml.load(fobj)
     start = params.get("start", 0)
 
-    with open("bar") as fobj:
-        start += int(fobj.read().strip())
-
     for e in range(EPOCHS):
         if os.path.exists(output_file):
             with open(output_file, "r") as fobj:
@@ -37,10 +34,14 @@ def main():
         else:
             iter_ = start
 
+        with open("bar") as fobj:
+            multiplier = int(fobj.read().strip())
+        mult = multiplier * iter_
+
         with open(output_file, "w") as fobj:
             fobj.write(f"{iter_}")
         with open(metrics_file, "w") as fobj:
-            yaml.dump({"epoch": iter_}, fobj)
+            yaml.dump({"epoch": iter_, "mult": mult}, fobj)
 
         make_checkpoint()
 
