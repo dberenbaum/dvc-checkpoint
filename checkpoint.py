@@ -8,8 +8,6 @@ import os
 
 from ruamel.yaml import YAML
 
-from dvc.api import make_checkpoint
-
 
 EPOCHS=2
 STEP = 1
@@ -43,8 +41,6 @@ def main():
             fobj.write(f"{iter_}")
         with open(metrics_file, "w") as fobj:
             yaml.dump({"epoch": iter_, "mult": mult}, fobj)
-
-        make_checkpoint()
 
 
 if __name__ == "__main__":
