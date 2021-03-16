@@ -14,3 +14,7 @@ stages:
     metrics:
     - scores.yaml:
         cache: false
+    live:
+      logs:
+        summary: true
+        html: true
