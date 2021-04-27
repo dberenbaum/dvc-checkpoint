@@ -12,7 +12,7 @@ from dvc.api import make_checkpoint
 
 
 EPOCHS=2
-STEP = 1
+STEP = 2
 
 
 def main():
