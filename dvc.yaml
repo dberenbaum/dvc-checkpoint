@@ -14,3 +14,4 @@ stages:
     metrics:
     - scores.yaml:
         cache: false
+        checkpoint: true
