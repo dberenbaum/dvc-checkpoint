@@ -16,8 +16,8 @@ stages:
         STEP: 1
     outs:
     - path: foo
-      md5: c20ad4d76fe97759aa27a0c99bff6710
+      md5: c51ce410c124a10e0db5e4b97fc2af39
       size: 2
     - path: scores.yaml
-      md5: e69d4a7d8a31855dcc9da679c1fbd7f9
+      md5: 8c4d743c19e0610daf8c812784a48a1d
       size: 19
