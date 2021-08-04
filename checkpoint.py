@@ -43,6 +43,8 @@ def main():
             fobj.write(f"{iter_}")
         with open(metrics_file, "w") as fobj:
             yaml.dump({"epoch": iter_, "mult": mult}, fobj)
+        with open("other.yaml", "w") as fobj:
+            yaml.dump({"epoch": iter_, "mult": mult}, fobj)
 
         make_checkpoint()
 

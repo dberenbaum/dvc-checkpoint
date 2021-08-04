@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  foo:
+    cmd: python checkpoint.py
+    deps:
+    - path: bar
+      md5: b026324c6904b2a9cb4b88d6d61c81d1
+      size: 2
+    - path: checkpoint.py
+      md5: 8984ee736dae46970045a0976c0db32e
+      size: 1310
+    params:
+      params.yaml:
+        start: 0
+      checkpoint.py:
+        STEP: 1
+    outs:
+    - path: foo
+      md5: a87ff679a2f3e71d9181a67b7542122c
+      size: 1
+    - path: logs
+    - path: scores.yaml
+      md5: fd045b4c2c24dae1f9fb9ed75be9b92f
+      size: 17
