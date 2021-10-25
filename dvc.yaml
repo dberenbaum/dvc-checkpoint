@@ -12,6 +12,6 @@ stages:
     - foo:
         checkpoint: true
     live:
-      dvclive
+      dvclive:
         summary: true
         html: true
