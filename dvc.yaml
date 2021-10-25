@@ -11,6 +11,7 @@ stages:
     outs:
     - foo:
         checkpoint: true
-    metrics:
-    - scores.yaml:
-        cache: false
+    live:
+      dvclive
+        summary: true
+        html: true
