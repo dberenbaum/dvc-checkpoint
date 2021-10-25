@@ -42,7 +42,8 @@ def main():
         with open(output_file, "w") as fobj:
             fobj.write(f"{iter_}")
 
-        logger.log({"epoch": iter_, "mult": mult}, fobj)
+        logger.log("epoch", iter_)
+        logger.log("mult", mult)
         logger.next_step()
 
 
